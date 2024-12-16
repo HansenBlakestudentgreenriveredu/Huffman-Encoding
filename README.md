@@ -32,13 +32,13 @@ The HuffmanEncoding class contains the main method and handles user input and ou
 - Prints the Huffman codes and the space savings.
 
 # Usage Instructions:
-# Step 1: Run the Program
+### Step 1: Run the Program
 Run the program by pressing the play button in IntelliJ IDEA while in the HuffmanEncoding.java class.
 
-# Step 2: Input a String
+### Step 2: Input a String
 The program will prompt you to enter a string. Type in the string you wish to encode.
 
-# Step 3: Output
+### Step 3: Output
 The program will output the following:
 - The Huffman codes for each character in the string.
 - The original size of the string in bits.
