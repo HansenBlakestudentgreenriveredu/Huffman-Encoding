@@ -46,7 +46,7 @@ The program will output the following:
 - The space savings in bits.
 
 # Example
-# Input:
+### Input:
 Welcome to Huffman Encoding Program!
 
 ### Output:
