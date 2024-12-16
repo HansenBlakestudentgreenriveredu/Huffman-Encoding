@@ -73,7 +73,7 @@ Original size in bits: 224
 Huffman size in bits: 152
 Space savings in bits: 72
 
-## Explanation of How the Program Works
+# Explanation of How the Program Works
 1. **User Input**: The program prompts the user for an input string.
 2. **Frequency Calculation**: It calculates the frequency of each character in the string.
 3. **Huffman Tree Construction**: Using a priority queue, the program builds a Huffman tree. Nodes with lower frequencies are merged first to create the tree structure.
