@@ -1,9 +1,10 @@
+import java.util.Comparator;
 import java.util.HashMap; // stores char codes
 import java.util.PriorityQueue; // building huffman tree
 
 public class HuffmanCoding {
     // map to store codes for each char
-    private HashMap<Character, String> huffmanCode = new HashMap<>();
+    private final HashMap<Character, String> huffmanCode = new HashMap<>();
 
     // method to make codes for each char
     public void encode(Node root, String str) {
@@ -26,7 +27,7 @@ public class HuffmanCoding {
 
     // make tree from char array and frequencies
     public Node buildHuffmanTree(char[] charArray, int[] charFreq) {
-        PriorityQueue<Node> priorityQueue = new PriorityQueue<>((a, b) -> a.frequency - b.frequency);
+        PriorityQueue<Node> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> a.frequency));
         for (int i = 0; i < charArray.length; i++)
             priorityQueue.add(new Node(charArray[i], charFreq[i]));{
         }
@@ -35,7 +36,7 @@ public class HuffmanCoding {
         while (priorityQueue.size() > 1) {
             Node left = priorityQueue.poll();
             Node right = priorityQueue.poll();
-            Node newNode = new Node('\0', left.frequency + right.frequency);
+            Node newNode = new Node('\0', left.frequency + (right != null ? right.frequency : 0));
             newNode.left = left;
             newNode.right = right;
             priorityQueue.add(newNode);
